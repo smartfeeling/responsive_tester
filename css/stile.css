@@ -1,0 +1,297 @@
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    overflow-y: -moz-scrollbars-vertical;
+    overflow-y: scroll;
+}
+
+a {
+    color: inherit;
+}
+
+a:hover {
+    color: black;
+}
+
+body {
+    padding: 0px;
+    margin: 0px;
+    background-color: #d9d9d9;
+    font-family: Arial, sans-serif;
+    font-size: 0.75em;
+    color: #404042;
+    min-width: 1200px
+}
+
+header {
+    width: 1100px;
+    margin: auto;
+    margin-top: 10px;
+    height: 80px;
+}
+
+/* intro */
+.intro {
+    display: block;
+    width: 190px;
+    height: 64px;
+    float: left;
+    background: url(../images/arrow-right.png) right no-repeat;
+    padding-right: 20px;
+}
+.intro h1 {
+    font-size: 20px;
+    line-height: 23px;
+    font-weight: bold;
+    display: inline;
+}
+
+.intro a {
+    font-size: 9px;
+    font-weight: normal;
+    padding-left: 12px;
+}
+
+/* menu   */
+#screen-options {
+    text-align: center;
+    height: 60px;
+    width: 560px;
+    background: url(../images/arrow-right.png) right no-repeat;
+    float: left;
+    margin-left: 65px;
+}
+
+#screen-options li {
+    text-indent: -9999px;
+    display: block;
+    height: 80px;
+    width: 90px;
+    padding: 5px;
+    float: left;
+
+    opacity: 0.4;
+
+    -webkit-transition: all 0.15s ease-in-out 0s;
+    -moz-transition: all 0.15s ease-in-out 0s;
+    -o-transition: all 0.15s ease-in-out 0s;
+    transition: all 0.15s ease-in-out 0s;
+}
+
+#screen-options li:hover {
+    opacity: 1;
+}
+
+#screen-options li.active {
+    opacity: 1;
+}
+
+#iphone {
+    background: url(../images/device-sprite.png) top no-repeat;
+    background-position: 0 12px;
+}
+
+#iphone-l {
+    background: url(../images/device-sprite.png) no-repeat 0 -93px;
+}
+
+#ipad {
+    background: url(../images/device-sprite.png) no-repeat 0 -197px;
+}
+
+#ipad-l {
+    background: url(../images/device-sprite.png) no-repeat 0 -306px;
+}
+
+#desktop {
+    background: url(../images/device-sprite.png) no-repeat 0 -422px;
+
+}
+
+.url-select {
+    float: left;
+    margin: 11px 0 0 32px;
+}
+
+input {
+    display: inline-block;
+    padding: 12px;
+    color: gray;
+    border: 1px solid #CCC;
+    border-radius: 3px;
+}
+
+#getURL {
+    width: 140px;
+}
+
+#button {
+    background-color: #404042;
+    color: #ddd;
+
+    -webkit-transition: all 0.15s ease-in-out 0s;
+    -moz-transition: all 0.15s ease-in-out 0s;
+    -o-transition: all 0.15s ease-in-out 0s;
+    transition: all 0.15s ease-in-out 0s;
+}
+
+#button:hover {
+    background-color: black;
+    color: white;
+}
+
+#viewport {
+    /* initial width only   */
+    margin: auto;
+    background-color: #CCCCCC;
+
+    margin-top: 28px;
+
+    /* trying different values to fix iOS issues with iFrame busting loose and wrecking the joint.   */
+    overflow: hidden;
+    overflow: scroll;
+    -webkit-overflow-scrolling: touch;
+
+    -webkit-transition: all 0.4s ease-in-out 0s;
+    -moz-transition: all 0.4s ease-in-out 0s;
+    -o-transition: all 0.4s ease-in-out 0s;
+    transition: all 0.4s ease-in-out 0s;
+}
+
+#viewport iframe {
+    background-color: white;
+    position: absolute;
+    margin: auto;
+    border: none;
+}
+
+/* ////// DEVICES */
+
+/* /// Details   */
+#device-detail {
+    position: relative;
+    z-index: 1000;
+    text-indent: -9999px;
+    display: block;
+    margin: auto;
+
+    -webkit-transition: all 0.15s ease-in-out 0s;
+    -moz-transition: all 0.15s ease-in-out 0s;
+    -o-transition: all 0.15s ease-in-out 0s;
+    transition: all 0.15s ease-in-out 0s;
+}
+
+.iphone-detail {
+    top: -53px;
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: #CCCCCC;
+}
+
+.iphone-l-detail {
+    top: -210px;
+    left: -270px;
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: #CCCCCC;
+}
+
+.ipad-detail {
+    top: -70px;
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    background-color: #CCCCCC;
+}
+
+.ipad-l-detail {
+    top: -512px;
+    left: 555px;
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    background-color: #CCCCCC;
+}
+
+.desktop-detail {
+    border-radius: 25px;
+    background: none;
+    border-bottom: 100px solid #404042;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    height: 0;
+    width: 100px;
+    top: 20px;
+}
+
+/* /// Devices sizes   */
+
+/* iphone 320 x 480 */
+#viewport.iphone {
+    border-top: 65px solid;
+    border-right: 35px solid;
+    border-bottom: 65px solid;
+    border-left: 35px solid;
+    border-radius: 20px;
+}
+
+.iphone, .iphone iframe {
+    width: 320px;
+    height: 480px;
+}
+
+.iphone-l {
+    border-top: 35px solid;
+    border-right: 65px solid;
+    border-bottom: 35px solid;
+    border-left: 65px solid;
+    border-radius: 20px;
+}
+
+.iphone-l, .iphone-l iframe {
+    width: 480px;
+    height: 320px;
+}
+
+/* ipad 1024 x 768 */
+.ipad {
+    border: 90px solid;
+    border-radius: 20px;
+}
+
+.ipad, .ipad iframe {
+    width: 768px;
+    height: 1024px;
+}
+
+.ipad-l {
+    border: 90px solid;
+    border-radius: 20px;
+}
+
+.ipad-l, .ipad-l iframe {
+    width: 1024px;
+    height: 768px;
+}
+
+/* desktop 1200 x 800 */
+.desktop {
+    border: 20px solid;
+    border-radius: 10px;
+}
+
+.desktop, .desktop iframe {
+    width: 1200px;
+    height: 800px;
+}
